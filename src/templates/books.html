@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book reviews</title>
+</head>
+<body>
+  <main>
+    <h1>Book reviews</h1>
+    <p><a href="{{ url_for('index') }}">Back to home</a></p>
+    {% if books %}
+      <ul>
+        {% for book in books %}
+          <li>
+            <h2>{{ book.title }}</h2>
+            <p>By {{ book.author }} · Rating: {{ book.rating }}/5</p>
+            <p>{{ book.review }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No books have been added yet.</p>
+    {% endif %}
+  </main>
+</body>
+</html>

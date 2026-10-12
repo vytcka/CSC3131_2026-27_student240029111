@@ -1,5 +1,4 @@
-from flask_migrate import Migrate
-from flask_wtf import FlaskForm
+from app import db
 
 class Book(db.Model):
     id = db.Column(db.Integer, primary_key=True)

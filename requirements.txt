@@ -1,4 +1,2 @@
 flask
-mysql
-Flask-SQLAlchemy 
-Flask-Migrate
+Flask-SQLAlchemy

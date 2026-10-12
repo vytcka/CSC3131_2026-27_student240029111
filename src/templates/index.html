@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book reviews</title>
+</head>
+<body>
+  <main>
+    <h1>Book reviews</h1>
+    <p>A small book-review app demonstrating a page, Flask server, and database-backed list.</p>
+    <form action="{{ url_for('list_books') }}" method="get">
+      <button type="submit">Get books</button>
+    </form>
+  </main>
+</body>
+</html>
