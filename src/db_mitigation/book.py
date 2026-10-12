@@ -1,4 +1,4 @@
-from app import db
+from db_mitigation.database import db
 
 class Book(db.Model):
     id = db.Column(db.Integer, primary_key=True)

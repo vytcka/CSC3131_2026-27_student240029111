@@ -1,7 +1,5 @@
 from flask import Flask, jsonify, render_template
-from flask_sqlalchemy import SQLAlchemy
-
-db = SQLAlchemy()
+from db_mitigation.database import db
 
 
 def create_app():
