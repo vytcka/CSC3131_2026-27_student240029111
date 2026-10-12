@@ -21,3 +21,14 @@ Open `http://127.0.0.1:5000/`. Use the **Get books** button to display records l
 Health check: `http://127.0.0.1:5000/health` returns `{"status":"ok"}`.
 
 JSON endpoint: `http://127.0.0.1:5000/api/books` returns the book records.
+
+## Run with Docker
+
+Copy `src/.env.example` to `src/.env`, then from the repository root run:
+
+```sh
+docker compose up --build
+```
+
+Open `http://localhost:8080/`. Stop with Ctrl+C. Dockerfile builds the Python
+image; compose.yaml runs it with port 8080, the env file and a persistent SQLite volume.

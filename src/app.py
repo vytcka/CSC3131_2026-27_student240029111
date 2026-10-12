@@ -1,10 +1,12 @@
+import os
 from flask import Flask, jsonify, render_template
 from db_mitigation.database import db
-
+from dotenv import load_dotenv
 
 def create_app():
+    load_dotenv()  # Load environment variables from .env file
     app = Flask(__name__)
-    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///books.db"
+    app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("databaseURI")
     db.init_app(app)
 
     from db_mitigation.book import Book
